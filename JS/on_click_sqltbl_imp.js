@@ -62,7 +62,6 @@ function on_click_sqltbl_imp(rowId) {
     value = jr_get_table_value(name_sqltbl_imp_stoc, rowId, sqltbl_col_denumire);
     jr_set_value(pt_form_el_denumire, value);
     value = jr_get_table_value(name_sqltbl_imp_stoc, rowId, sqltbl_col_cod_art);
-    sessionStorage.setItem('cod_art_sel_imp', value);
     jr_set_value(pt_form_el_cod_art, value);
     value = jr_get_table_value(name_sqltbl_imp_stoc, rowId, sqltbl_col_categorie);
     jr_set_value(pt_form_el_categorie, value);

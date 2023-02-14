@@ -4,7 +4,7 @@ function on_click_sqltbl_imp(rowId) {
     var name_sqltbl_imp_stoc = 'sqltbl_art_imp_stoc';
     var sqltbl_col_denumire = 'DENUMIRE'; 
     var pt_form_el_denumire = "txt_" + sqltbl_col_denumire.toLowerCase();   
-    var sqltbl_col_cod_art = 'COD_ART';
+    var sqltbl_col_cod_art = 'COD_ART_0';
     var pt_form_el_cod_art = "txt_" + sqltbl_col_cod_art.toLowerCase();
     var sqltbl_col_categorie = 'CATEGORIE';
     var pt_form_el_categorie = "sqllst_" + sqltbl_col_categorie.toLowerCase();
@@ -48,14 +48,12 @@ function on_click_sqltbl_imp(rowId) {
     var pt_form_el_status = "lst_" + sqltbl_col_status.toLowerCase();
     // Pt coduri art
     // var name_sqltbl_cod_art = 'sqltbl_coduri_asoc';
-    // var sqltbl2_col_cod_art_0 = 'COD_ART_0';
-    // var pt_form_el_cod_art_0 = "txt_" + sqltbl2_col_cod_art_0.toLocaleLowerCase
     // var sqltbl2_col_cod_art_1 = 'COD_ART_1';
-    // var pt_form_el_cod_art_1 = "txt_" + sqltbl2_col_cod_art_1.toLocaleLowerCase
+    // var pt_form_el_cod_art_1 = "txt_" + sqltbl2_col_cod_art_1.toLocaleLowerCase();
     // var sqltbl2_col_cod_art_2 = 'COD_ART_2';
-    // var pt_form_el_cod_art_2 = "txt_" + sqltbl2_col_cod_art_2.toLocaleLowerCase
+    // var pt_form_el_cod_art_2 = "txt_" + sqltbl2_col_cod_art_2.toLocaleLowerCase();
     // var sqltbl2_col_cod_art_3 = 'COD_ART_3';
-    // var pt_form_el_cod_art_3 = "txt_" + sqltbl2_col_cod_art_3.toLocaleLowerCase
+    // var pt_form_el_cod_art_3 = "txt_" + sqltbl2_col_cod_art_3.toLocaleLowerCase();
     // var sqltbl2_col_cod_art_4 = 'COD_ART_4';
     // var sqltbl2_col_cod_art_5 = 'COD_ART_5';
 
@@ -64,6 +62,7 @@ function on_click_sqltbl_imp(rowId) {
     value = jr_get_table_value(name_sqltbl_imp_stoc, rowId, sqltbl_col_denumire);
     jr_set_value(pt_form_el_denumire, value);
     value = jr_get_table_value(name_sqltbl_imp_stoc, rowId, sqltbl_col_cod_art);
+    sessionStorage.setItem('cod_art_sel_imp', value);
     jr_set_value(pt_form_el_cod_art, value);
     value = jr_get_table_value(name_sqltbl_imp_stoc, rowId, sqltbl_col_categorie);
     jr_set_value(pt_form_el_categorie, value);

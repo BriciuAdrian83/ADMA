@@ -13,7 +13,7 @@ function on_click_sqltbl_imp_deja_inreg(rowId) {
         if (val_cod === cod_art_selectat) {
             sessionStorage.setItem('exista_deja', 'da');
             document.querySelector('#DataTables_Table_0_filter > label > input[type=search]').value = denumire_art_selectat;
-            jr_notify_info("Există deja un articol înregistrat în baza de date cu același cod articol.\nDenumirea acestuia a fost copiată în căsuța de search a tabelului cu articole înregistrate.\nApăsați tasta Enter pentru a filtra tabelul.", 30);
+            jr_notify_info("Există deja un articol înregistrat în baza de date cu același cod articol.\nDenumirea acestuia a fost copiată în căsuța de search a tabelului cu articole înregistrate.\nApăsați tasta Enter pentru a filtra tabelul.", 15);
             setTimeout(function() {
                 document.querySelector('#DataTables_Table_0_filter > label > input[type=search]').select();
             }, 200);           

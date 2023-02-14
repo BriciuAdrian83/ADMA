@@ -67,4 +67,5 @@ function on_click_sqltbl_upd_art_inreg(rowId) {
     jr_show('txt_alt_tip_art');
     jr_show('txt_alt_categorie');
     jr_show('txt_alt_subcateg');
+    jr_set_value('radio_sel_operat', 'update');
 }

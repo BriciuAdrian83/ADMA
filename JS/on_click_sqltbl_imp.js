@@ -96,6 +96,14 @@ function on_click_sqltbl_imp(rowId) {
         value = jr_get_table_value(name_sqltbl_imp_stoc, rowId, sqltbl_col_status);
         jr_set_value(pt_form_el_status, value);
         jr_set_value('radio_sel_operat', 'import');
+        // Resetare Id art la next numb
+        var sqltbl_art_inreg_denum = 'sqlttbl_art_inreg';
+        var last_id_numb = jr_get_table_value(sqltbl_art_inreg_denum, 0, 'ID_ARTICOL');
+        var next_id_numb = parseInt(last_id_numb, 0) + 1;
+        jr_set_value('txt_id_art', next_id_numb);
+        jr_hide('txt_alt_tip_art');
+        jr_hide('txt_alt_categorie');
+        jr_hide('txt_alt_subcateg');
     }
 
 }

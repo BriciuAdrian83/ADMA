@@ -49,17 +49,6 @@ function on_click_sqltbl_imp(rowId) {
         var pt_form_el_diametru = "txt_" + sqltbl_col_diametru.toLowerCase();
         var sqltbl_col_status = 'STATUS';
         var pt_form_el_status = "lst_" + sqltbl_col_status.toLowerCase();
-        // Pt coduri art
-        // var name_sqltbl_cod_art = 'sqltbl_coduri_asoc';
-        // var sqltbl2_col_cod_art_1 = 'COD_ART_1';
-        // var pt_form_el_cod_art_1 = "txt_" + sqltbl2_col_cod_art_1.toLocaleLowerCase();
-        // var sqltbl2_col_cod_art_2 = 'COD_ART_2';
-        // var pt_form_el_cod_art_2 = "txt_" + sqltbl2_col_cod_art_2.toLocaleLowerCase();
-        // var sqltbl2_col_cod_art_3 = 'COD_ART_3';
-        // var pt_form_el_cod_art_3 = "txt_" + sqltbl2_col_cod_art_3.toLocaleLowerCase();
-        // var sqltbl2_col_cod_art_4 = 'COD_ART_4';
-        // var sqltbl2_col_cod_art_5 = 'COD_ART_5';
-    
         // Copiere date existente in sql table imp stocuri on click
         var value;
         value = jr_get_table_value(name_sqltbl_imp_stoc, rowId, sqltbl_col_denumire);
@@ -106,6 +95,7 @@ function on_click_sqltbl_imp(rowId) {
         jr_set_value(pt_form_el_diametru, value);
         value = jr_get_table_value(name_sqltbl_imp_stoc, rowId, sqltbl_col_status);
         jr_set_value(pt_form_el_status, value);
+        jr_set_value('radio_sel_operat', 'import');
     }
 
 }

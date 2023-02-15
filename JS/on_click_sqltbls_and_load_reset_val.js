@@ -1,4 +1,4 @@
-function on_click_sqltbls_reset_val() {
+function on_click_sqltbls_and_load_reset_val() {
     // Resetare la empty valori
     var value;
     value = '';

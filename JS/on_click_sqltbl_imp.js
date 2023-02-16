@@ -98,9 +98,14 @@ function on_click_sqltbl_imp(rowId) {
         jr_set_value('radio_sel_operat', 'import');
         // Resetare Id art la next numb
         var sqltbl_art_inreg_denum = 'sqlttbl_art_inreg';
-        var last_id_numb = jr_get_table_value(sqltbl_art_inreg_denum, 0, 'ID_ARTICOL');
-        var next_id_numb = parseInt(last_id_numb, 0) + 1;
-        jr_set_value('txt_id_art', next_id_numb);
+        var max_id = jr_get_table_max_id(sqltbl_art_inreg_denum);
+        if (max_id === null) {
+            jr_set_value('txt_id_art', 1);
+        } else {
+            var last_id_numb = jr_get_table_value(sqltbl_art_inreg_denum, 0, 'ID_ARTICOL');
+            var next_id_numb = parseInt(last_id_numb, 0) + 1;
+            jr_set_value('txt_id_art', next_id_numb);
+        }
         jr_hide('txt_alt_tip_art');
         jr_hide('txt_alt_categorie');
         jr_hide('txt_alt_subcateg');

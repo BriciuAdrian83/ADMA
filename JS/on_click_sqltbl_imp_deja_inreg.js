@@ -1,4 +1,7 @@
 function on_click_sqltbl_imp_deja_inreg(rowId) {
+    // Setare radio pe import si cod import read only 
+    jr_set_value('radio_sel_operat', 'import');
+    jr_set_readonly('txt_cod_art', true);
     // Denumiri sqltbl si pt
     var name_sqltbl_imp_stoc = 'sqltbl_art_imp_stoc';
     var name_sqltbl_art_inreg = 'sqlttbl_art_inreg';

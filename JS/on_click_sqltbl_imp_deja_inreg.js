@@ -7,15 +7,19 @@ function on_click_sqltbl_imp_deja_inreg(rowId) {
     var name_sqltbl_art_inreg = 'sqlttbl_art_inreg';
     var cod_art_selectat;
     cod_art_selectat = jr_get_table_value(name_sqltbl_imp_stoc, rowId, 'COD_ART');
-    var val_cod;
+    var val_cod, denumire;
     sessionStorage.setItem('exista_deja', 'nu');
     jr_loop_table(name_sqltbl_art_inreg, function (subtable, id_rand) {
         val_cod = jr_get_table_value(subtable, id_rand, 'COD_ART_0');
         if (val_cod === cod_art_selectat) {
+            denumire = jr_get_table_value(subtable, id_rand, 'DENUMIRE');
             sessionStorage.setItem('exista_deja', 'da');
-            document.querySelector('#DataTables_Table_0_filter > label > input[type=search]').value = cod_art_selectat;
+            document.querySelector('#DataTables_Table_0_filter > label > input[type=search]').value = denumire;
             jr_notify_info("Există deja un articol înregistrat în baza de date cu același cod articol", 10);
-            document.querySelector('#DataTables_Table_0_filter > label > input[type=search]').focus();     
+            document.querySelector('#DataTables_Table_0_filter > label > input[type=search]').focus();
+            var e = jQuery.Event("keyup");
+            e.which = 13; //enter key
+            jQuery("#DataTables_Table_0_filter > label > input[type=search]").trigger(e);     
         }
     });
 }

@@ -1,4 +1,4 @@
-function on_click_sqltbl_imp2(rowId) {
+function on_click_sqltbl_loop_table(rowId) {
 /* Tot scriptul va fi conditionat de valoarea stocată în sessionStorage dupa verificare 
     dacă articolul este deja în sqltbl cu art inreg scriptul on_click_sqltbl_imp_deja_inreg */
     var exista_deja = sessionStorage.getItem('exista_deja');

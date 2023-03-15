@@ -55,12 +55,12 @@ function on_click_sqltbl_imp(rowId) {
         jr_set_value(pt_form_el_denumire, value);
         value = jr_get_table_value(name_sqltbl_imp_stoc, rowId, sqltbl_col_cod_art);
         jr_set_value(pt_form_el_cod_art, value);
-        var element = document.querySelector('#DataTables_Table_2_filter > label > input[type=search]');
-        element.value = value;
-        element.focus();
-        var e = jQuery.Event("keyup");
-        e.which = 13; //enter key
-        jQuery("#DataTables_Table_2_filter > label > input[type=search]").trigger(e);
+        // var element = document.querySelector('#DataTables_Table_2_filter > label > input[type=search]');
+        // element.value = value;
+        // element.focus();
+        // var e = jQuery.Event("keyup");
+        // e.which = 13; //enter key
+        // jQuery("#DataTables_Table_2_filter > label > input[type=search]").trigger(e);
         value = jr_get_table_value(name_sqltbl_imp_stoc, rowId, sqltbl_col_categorie);
         jr_set_value(pt_form_el_categorie, value);
         value = jr_get_table_value(name_sqltbl_imp_stoc, rowId, sqltbl_col_subcategorie);

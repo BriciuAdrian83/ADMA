@@ -1,6 +1,7 @@
 function on_click_sqltbl_upd_art_inreg(rowId) {
 
     jr_set_readonly('txt_cod_art', false);
+    jr_set_readonly('txt_denumire', true);
     var sqltbl_art_inreg_denum = 'sqlttbl_art_inreg';
     // Copiere date existente in sql table imp stocuri on click
     var value;

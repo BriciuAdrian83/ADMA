@@ -1,6 +1,7 @@
 function on_check_introd_man() {
 
     jr_set_readonly('txt_cod_art', false);
+    jr_set_readonly('txt_denumire', false);
     var sqltbl_art_inreg_denum = 'sqlttbl_art_inreg';
     var last_id_numb = jr_get_table_value(sqltbl_art_inreg_denum, 0, 'ID_ARTICOL');
     var next_id_numb = parseInt(last_id_numb, 0) + 1;

@@ -1,5 +1,6 @@
 function on_click_sqltbls_and_load_reset_val() {
     // Resetare la empty valori
+    jr_set_readonly('txt_denumire', true);
     var value;
     value = '';
     jr_set_value('txt_denumire', value);
